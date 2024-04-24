@@ -1,15 +1,47 @@
-import { useState } from "react";
-import "./App.css";
+import styles from "./style";
 
-function App() {
+import {
+  NavBar,
+  Hero,
+  Stats,
+  Business,
+  Billing,
+  CardDeal,
+  Testomonial,
+  Client,
+  CTA,
+  Footer,
+} from "./components";
 
-  return (
-    <>
-      <div className="bg-primary w-full overflow-hidden">
-        <div className="text-secondary">Hello World !!</div>
+const App = () => (
+  <>
+    <div className="bg-primary w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <NavBar />
+        </div>
       </div>
-    </>
-  );
-}
+
+      <div className={`${styles.flexStart} bg-primary`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+
+      <div className={`${styles.flexStart} ${styles.paddingX} bg-primary`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testomonial />
+          <Client />
+          <CTA />
+          <Footer />
+        </div>
+      </div>
+    </div>
+  </>
+);
 
 export default App;
