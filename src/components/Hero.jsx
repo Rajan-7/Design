@@ -34,12 +34,20 @@ const Hero = () => (
         fees.
       </p>
     </div>
-    <div>
-      <img src={robot} alt="billing" className="z-[5] relative w-[100%] h-[100%]" />
+    <div className={`flex-1 flex relative ${styles.flexCenter} md:my-0 my-10`}>
+      <img
+        src={robot}
+        alt="billing"
+        className="z-[5] relative w-[100%] h-[100%]"
+      />
+      <div className="absolute z-[0] h-[35%] w-[40%] top-0 pink__gradient" />
+      <div className="absolute z-[1] h-[80%] w-[80%] rounded-full bottom-40 white__gradient" />
+      <div className="absolute z-[0] h-[50%] w-[50%] right-20 bottom-20 blue__gradient" />
+    </div>
+    <div className={`${styles.flexCenter} ss:hidden`}>
+      <GetStarted />
     </div>
   </section>
 );
-
-
 
 export default Hero;
